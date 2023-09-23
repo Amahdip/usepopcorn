@@ -10,6 +10,7 @@ import tempWatchedData from "./data/watchList";
 import WatchedSummary from "./components/WatchedSummary";
 import WatchedList from "./components/WatchedList";
 import MoviesList from "./components/MoviesList";
+import RatingStars from "./components/RatingStars";
 
 
 
@@ -33,7 +34,6 @@ function App() {
           <WatchedSummary watched={watched} />
           <WatchedList watched={watched} />
         </Box>
-
       </Main>
 
     </>
