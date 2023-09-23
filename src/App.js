@@ -5,11 +5,11 @@ import Main from "./components/Main";
 import Search from "./components/Search";
 import NumResults from "./components/NumResults";
 import Logo from "./components/Logo";
-import Movies from "./components/Movies";
-import Watched from "./components/Watched";
+import Box from "./components/Box";
 import tempWatchedData from "./data/watchList";
 import WatchedSummary from "./components/WatchedSummary";
 import WatchedList from "./components/WatchedList";
+import MoviesList from "./components/MoviesList";
 
 
 
@@ -26,11 +26,13 @@ function App() {
         <NumResults movies={movies} />
       </Navbar>
       <Main>
-        <Movies movies={movies} />
-        <Watched>
+        <Box>
+          <MoviesList movies={movies} />
+        </Box>
+        <Box>
           <WatchedSummary watched={watched} />
           <WatchedList watched={watched} />
-        </Watched>
+        </Box>
 
       </Main>
 
