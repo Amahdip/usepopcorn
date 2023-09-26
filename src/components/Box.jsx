@@ -3,6 +3,7 @@ import Button from "./Button";
 
 function Box({ children }) {
 	const [isOpen, setIsOpen] = useState(true);
+	const [userRating, setUserRating] = useState(0);
 
 	function handleToggle() {
 		setIsOpen((isOpen) => !isOpen);

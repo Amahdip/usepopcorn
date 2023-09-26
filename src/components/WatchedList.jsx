@@ -1,11 +1,11 @@
 import React from "react";
 import Movie from "./Movie";
 
-function WatchedList({ watched }) {
+function WatchedList({ watched, onDelete, onSelect }) {
 	return (
-		<ul className='list'>
+		<ul className='list list-movies'>
 			{watched?.map((movie) => (
-				<Movie movie={movie}>
+				<Movie key={movie.imdbID} movie={movie} onSelect={onSelect}>
 					<div>
 						<p>
 							<span>⭐️</span>
@@ -17,8 +17,14 @@ function WatchedList({ watched }) {
 						</p>
 						<p>
 							<span>⏳</span>
-							<span>{movie.runtime}</span>
+							<span>{movie.Runtime}</span>
 						</p>
+						<button
+							className='btn-delete'
+							onClick={() => onDelete(movie.imdbID)}
+						>
+							X
+						</button>
 					</div>
 				</Movie>
 			))}
